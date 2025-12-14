@@ -42,7 +42,7 @@ export function editObject(
 }
 
 export async function loadObjects() {
-    const res = await fetch("/data/dt.json"); // must be in /public
+    const res = await fetch("data/dt.json"); // must be in /public
     const data = await res.json();
 
     const parsed = ObjectZod.safeParse(data.products);
@@ -52,7 +52,7 @@ export async function loadObjects() {
 }
 
 async function saveObjects(objects: objectType[]) {
-    await fetch("/data/dt.json", {
+    await fetch("data/dt.json", {
         method: "POST",
         headers: { "updating the products": "application/json" },
         body: JSON.stringify(objects),
