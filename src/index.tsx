@@ -2,7 +2,7 @@
 import { render } from "solid-js/web";
 import "./index.css";
 import App from "./App.tsx";
-import { Router } from "@solidjs/router";
+import { HashRouter } from "@solidjs/router";
 import { CartContextProvider } from "./store/Cart-store";
 
 const root = document.getElementById("root");
@@ -10,9 +10,9 @@ const root = document.getElementById("root");
 render(
     () => (
         <CartContextProvider>
-            <Router>
+            <HashRouter>
                 <App />
-            </Router>
+            </HashRouter>
         </CartContextProvider>
     ),
     root!
