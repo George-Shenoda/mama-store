@@ -7,4 +7,5 @@ export default defineConfig({
     build: {
         assetsDir: ".",
     },
+    base: "/mama-store/",
 });
