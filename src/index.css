@@ -1,0 +1,21 @@
+/* src/index.css - canonical Tailwind setup */
+@import "tailwindcss";
+
+/* custom components using @apply must come AFTER the directives */
+@layer components {
+    .click {
+        @apply bg-orange-600 py-2 px-3 my-2 inline-block rounded-md text-white
+            cursor-pointer hover:bg-orange-700 transition duration-300 ease-in-out dark:bg-orange-500 dark:hover:bg-orange-600;
+    }
+}
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+    body {
+        @apply bg-[#ddd];
+    }
+    html.dark body {
+        @apply bg-gray-900 text-white;
+    }
+}
