@@ -4,8 +4,5 @@ import solid from "vite-plugin-solid";
 
 export default defineConfig({
     plugins: [solid(), tailwindcss()],
-    build: {
-        assetsDir: ".",
-    },
     base: "/mama-store/",
 });
